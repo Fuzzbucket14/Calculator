@@ -24,20 +24,26 @@ public class Main {
 
     try{
 
+      //finds date and time for output file
       Date currentdate = new Date();
       SimpleDateFormat formatter = new SimpleDateFormat("_dd_MM_yyyy_HH_mm_ss");
       String datetime = formatter.format(currentdate);
       String date = datetime;
 
-
+      //makes file directory string
       String Output = System.getProperty("user.dir") + "/output";
-      
+
+      //makes file directory
       new File(Output).mkdirs();
+
+      //adds extra /output for output file
       Output = Output + "/output" ;
+
+      //makes output file
       File file = new File(Output + "Output"+date+".txt"); 
       FileWriter myWriter = new FileWriter(Output + "Output"+date+".txt");
 
-      
+      //tells user taht we made a new file
       if (file.createNewFile()) {
        System.out.println("created output file:" + Output+date+".txt");
        myWriter.write("created output file:" + Output+date+".txt" + System.getProperty( "line.separator" ));
