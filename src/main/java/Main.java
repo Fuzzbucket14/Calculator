@@ -55,17 +55,30 @@ public class Main {
             String op = "0" ;
             double Num2 = 0 ;
 
-            System.out.println("enter equation"); //getting input'
-            myWriter.write("enter equation" + System.getProperty( "line.separator" ));
-            Num1 = myObj.nextDouble();
-            op = myObj.next();
-            Num2 = myObj.nextDouble(); 
+            //prombting input
+            System.out.println("enter equation"); 
 
-             myWriter.write(Num1 + " " + op + " " + Num2 + System.getProperty( "line.separator" ));
+            //writes println to output this happens to all println
+            myWriter.write("enter equation" + System.getProperty( "line.separator" )); 
+
+            //starts decoding variables from scanner
+            Num1 = myObj.nextDouble(); 
+            op = myObj.next();
+
+            //skips num2 if squareroot is entered so it dosen't fuck up
+            if (!op.toUpperCase().contains("SQUAREROOT")){  
+               
+               Num2 = myObj.nextDouble(); 
+
+            }
+
+            //writes equation to output
+             myWriter.write(Num1 + " " + op + " " + Num2 + System.getProperty( "line.separator" )); 
             double result = 1 ;           
 
-            if (op.contains("+")) {
-              
+            //big if, else if chain for operations
+            if (op.contains("+")) {                
+
               result = Num1 + Num2 ;
 
             } else if(op.contains("-")) {
@@ -96,17 +109,24 @@ public class Main {
 
             }
 
+
+           //prints results and wrtites them to output
            System.out.println("= " + result);
            myWriter.write("= " + result + System.getProperty( "line.separator" ));
 
 
-
          }
+
+
+         // if number is not entered correctly like if there is a letter this catchs that error and tells the user to do it correctly and writes it to output
          catch(Exception E) {
+
             System.out.println("Make sure equation is entered correctly!");
             JOptionPane.showMessageDialog(null,"Make sure equation is entered correctly!");  
             myWriter.write("Make sure equation is entered correctly!");
-         }finally {
+
+         }//finally statement prombts user to continue or not
+         finally {
 
             System.out.println("Exit? Y/N") ;
            
@@ -133,8 +153,11 @@ public class Main {
 
 
       }
+      //closes scanner and writer
       myObj.close() ;  
       myWriter.close();
+
+      //theese are here for write errors
     } catch (FileNotFoundException e) {
         e.printStackTrace();
     } catch (IOException e) {
