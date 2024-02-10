@@ -1,7 +1,7 @@
 /*Calcutor
  * By: Ian Davey
  * Purpose: to calculate stuff
- * Version: 0.1.2
+ * Version: 0.1.3
  * Date of last update 2/9/2024
  * Date of start: 1/~26/2024
  */
@@ -30,13 +30,17 @@ public class Main {
       String date = datetime;
 
 
-      File file = new File("Output"+date+".txt"); 
-      FileWriter myWriter = new FileWriter("Output"+date+".txt");
+      String Output = System.getProperty("user.dir") + "/output";
+      
+      new File(Output).mkdirs();
+      Output = Output + "/output" ;
+      File file = new File(Output + "Output"+date+".txt"); 
+      FileWriter myWriter = new FileWriter(Output + "Output"+date+".txt");
 
       
       if (file.createNewFile()) {
-       System.out.println("created output file: Output"+date+".txt");
-       myWriter.write("created output file: Output.txt /n" + System.getProperty( "line.separator" ));
+       System.out.println("created output file:" + Output+date+".txt");
+       myWriter.write("created output file:" + Output+date+".txt" + System.getProperty( "line.separator" ));
       }
 
 
