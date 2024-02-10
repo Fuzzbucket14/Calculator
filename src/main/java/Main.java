@@ -1,7 +1,7 @@
 /*Calcutor
  * By: Ian Davey
  * Purpose: to calculate stuff
- * Version: 0.1.4
+ * Version: 0.1.5
  * Date of last update 2/9/2024
  * Date of start: 1/~26/2024
  */
@@ -127,7 +127,10 @@ public class Main {
 
          }//finally statement prombts user to continue or not
          finally {
-
+            boolean exit = false ;
+            
+            while (exit==false) {
+               
             System.out.println("Exit? Y/N") ;
            
             myWriter.write("Exit? Y/N" + System.getProperty( "line.separator" ));
@@ -139,15 +142,18 @@ public class Main {
             myWriter.write(Exit + System.getProperty( "line.separator" ));
 
             if (Exit.equalsIgnoreCase("Y")) {
+               exit = true ;
                stay = false; 
 
 
             }else if (Exit.equalsIgnoreCase("N")) {
+               exit = true;
                myObj.nextLine();
             }else {
                System.out.println("Please enter Y or N");
                myWriter.write("Please enter Y or N" + System.getProperty( "line.separator" ));
             }
+          }
 
          }
 
