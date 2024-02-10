@@ -119,7 +119,6 @@
           catch(Exception E) {
  
              System.out.println("Make sure equation is entered correctly!");
-             JOptionPane.showMessageDialog(null,"Make sure equation is entered correctly!");  
              myWriter.write("Make sure equation is entered correctly!");
  
           }//finally statement prombts user to continue or not
