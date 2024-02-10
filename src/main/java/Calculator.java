@@ -7,8 +7,6 @@
  import java.io.FileNotFoundException;
  import java.io.IOException;
  
- import javax.swing.JOptionPane;
- 
  public class Calculator {
  
      public void RunCalculateor(String[] args) {
