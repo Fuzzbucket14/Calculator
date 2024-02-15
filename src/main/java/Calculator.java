@@ -31,24 +31,6 @@
  
              //starts decoding variables from scanner
 
-
-                String input = myObj.next();
-
-                if (input.contains("+")){
-                  op = "+" ;
-                  
-                  
-                }
-            
-                for (int i = 0; i < input.length(); i++) {
-                  
-                char character = input.charAt(i);
-                System.out.println(character);
-                  
-                  
-              }
-
-
              Num1 = myObj.nextDouble(); 
              op = myObj.next();
  
@@ -88,22 +70,17 @@
                    result = result * Num1 ;
                    power --;
                 }
- 
-                
+                 
              } else if(op.toUpperCase().contains("SQUAREROOT")) {
                
                result = Math.sqrt(Num1);
  
-             }
- 
- 
+             } 
             //prints results and wrtites them to output
             System.out.println("= " + result);
             myWriter.write("= " + result + System.getProperty( "line.separator" ));
  
- 
           }
- 
  
           // if number is not entered correctly like if there is a letter this catchs that error and tells the user to do it correctly and writes it to output
           catch(Exception E) {
