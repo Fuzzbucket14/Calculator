@@ -21,6 +21,10 @@
              double Num1 = 0 ;
              String op = "0" ;
              double Num2 = 0 ;
+             boolean decode = true ;
+             int decoder = 0;
+             Character tempdecode;
+             
  
              //prombting input
              System.out.println("enter equation"); 
@@ -29,6 +33,36 @@
              myWriter.write("enter equation" + System.getProperty( "line.separator" )); 
  
              //starts decoding variables from scanner
+
+
+            
+               String tempscanner = myObj.nextLine();
+             int length = tempscanner.length();
+
+             for (0,length){
+
+               tempscanner=myObj.nextLine();
+
+               tempdecode = tempscanner.charAt(decoder);
+               System.out.println(tempdecode);
+
+               decoder = decoder + 1;
+               tempdecode = tempscanner.charAt(decoder);
+               System.out.println(tempdecode);
+
+
+
+               if (tempdecode.equals("+")){
+                decode=false;
+                System.out.println("+");
+               }
+
+              
+
+
+            }
+
+
              Num1 = myObj.nextDouble(); 
              op = myObj.next();
  
