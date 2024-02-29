@@ -21,6 +21,7 @@
              double Num1 = 0 ;
              String op = "0" ;
              double Num2 = 0 ;
+             
  
              //prombting input
              System.out.println("enter equation"); 
@@ -29,6 +30,7 @@
              myWriter.write("enter equation" + System.getProperty( "line.separator" )); 
  
              //starts decoding variables from scanner
+
              Num1 = myObj.nextDouble(); 
              op = myObj.next();
  
@@ -60,7 +62,11 @@
                
                 result = Num1 * Num2 ;
  
-             } else if(op.contains("^")) {
+             }else if(op.contains("%")) {
+               
+               result = Num1 % Num2 ;
+
+            } else if(op.contains("^")) {
  
                 double power = Num2 ;
                 result = 1 ;
@@ -68,22 +74,17 @@
                    result = result * Num1 ;
                    power --;
                 }
- 
-                
+                 
              } else if(op.toUpperCase().contains("SQUAREROOT")) {
                
                result = Math.sqrt(Num1);
  
-             }
- 
- 
+             } 
             //prints results and wrtites them to output
             System.out.println("= " + result);
             myWriter.write("= " + result + System.getProperty( "line.separator" ));
  
- 
           }
- 
  
           // if number is not entered correctly like if there is a letter this catchs that error and tells the user to do it correctly and writes it to output
           catch(Exception E) {

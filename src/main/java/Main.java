@@ -1,7 +1,7 @@
 /*Calcutor
  * By: Ian Davey
  * Purpose: to calculate stuff
- * Version: 0.1.8
+ * Version: 0.2.0
  * Date of last update 2/9/2024
  * Date of start: 1/~26/2024
  */
