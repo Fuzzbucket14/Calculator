@@ -62,7 +62,11 @@
                
                 result = Num1 * Num2 ;
  
-             } else if(op.contains("^")) {
+             }else if(op.contains("%")) {
+               
+               result = Num1 % Num2 ;
+
+            } else if(op.contains("^")) {
  
                 double power = Num2 ;
                 result = 1 ;
