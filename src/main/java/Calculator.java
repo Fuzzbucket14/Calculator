@@ -90,7 +90,7 @@
           catch(Exception E) {
  
              System.out.println("Make sure equation is entered correctly!");
-             myWriter.write("Make sure equation is entered correctly!");
+             myWriter.write("Make sure equation is entered correctly!"+ System.getProperty( "line.separator" ));
  
           }//finally statement prombts user to continue or not
           finally {
@@ -121,10 +121,7 @@
                 myWriter.write("Please enter Y or N" + System.getProperty( "line.separator" ));
              }
            }
- 
           }
- 
- 
        }
        //closes scanner and writer
        myObj.close() ;  
