@@ -23,7 +23,8 @@ public class Calculator {
 
                // prombting input
                System.out.println("enter equation");
-
+               System.out.println("Format: X + Y");
+               
                // writes println to output this happens to all println
                myWriter.write("enter equation" + System.getProperty("line.separator"));
 
